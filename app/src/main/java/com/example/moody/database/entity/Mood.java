@@ -1,9 +1,10 @@
-package com.example.moody.database;
+package com.example.moody.database.entity;
 
-import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
+
+import com.example.moody.database.Feeling;
 
 import java.util.Date;
 

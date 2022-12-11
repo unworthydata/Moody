@@ -1,4 +1,4 @@
-package com.example.moody.database;
+package com.example.moody.database.entity;
 
 import androidx.room.Entity;
 import androidx.room.ForeignKey;

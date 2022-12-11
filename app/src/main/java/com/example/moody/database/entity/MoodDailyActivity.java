@@ -1,8 +1,7 @@
-package com.example.moody.database;
+package com.example.moody.database.entity;
 
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
-import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(foreignKeys = {
