@@ -11,8 +11,8 @@ import androidx.room.PrimaryKey;
 })
 public class DailyActivity {
     @PrimaryKey(autoGenerate = true)
-    private int id;
-    private String name;
+    public int id;
+    public String name;
     //foreign key
-    private int dailyactivitygroup_id;
+    public int dailyactivitygroup_id;
 }

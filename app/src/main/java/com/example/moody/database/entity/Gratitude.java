@@ -11,8 +11,8 @@ import androidx.room.PrimaryKey;
 })
 public class Gratitude {
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    public int id;
     // foreign key
-    private int mood_id;
-    private String gratitude;
+    public Integer mood_id;
+    public String gratitude;
 }

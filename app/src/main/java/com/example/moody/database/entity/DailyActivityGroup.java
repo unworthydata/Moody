@@ -1,9 +1,11 @@
 package com.example.moody.database.entity;
 
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+@Entity
 public class DailyActivityGroup {
     @PrimaryKey(autoGenerate = true)
-    private int id;
-    private String name;
+    public int id;
+    public String name;
 }

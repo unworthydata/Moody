@@ -8,17 +8,11 @@ import com.example.moody.database.Feeling;
 
 import java.util.Date;
 
-@Entity(foreignKeys = {@ForeignKey(entity = Gratitude.class,
-        parentColumns = "id",
-        childColumns = "gratitude_id",
-        onDelete = ForeignKey.CASCADE)
-})
+@Entity
 public class Mood {
     @PrimaryKey(autoGenerate = true)
-    private int id;
-    private Date date;
-    private Feeling feeling;
-    // foreign key
-    private int gratitude_id;
-    private String event;
+    public int id;
+    public Date date;
+    public Feeling feeling;
+    public String event;
 }

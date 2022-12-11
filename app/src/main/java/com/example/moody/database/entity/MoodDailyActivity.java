@@ -15,8 +15,8 @@ import androidx.room.PrimaryKey;
                 onDelete = ForeignKey.CASCADE)})
 public class MoodDailyActivity {
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    public int id;
     // foreign keys
-    private int mood_id;
-    private int dailyactivity_id;
+    public int mood_id;
+    public int dailyactivity_id;
 }

@@ -16,6 +16,9 @@ public interface MoodDao {
     @Query("SELECT * FROM " + tableName)
     List<Mood> getAll();
 
+    @Insert
+    void insert(Mood mood);
+
     @Delete
     void delete(Mood mood);
 }
