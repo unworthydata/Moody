@@ -17,6 +17,6 @@ public class MoodDailyActivity {
     @PrimaryKey(autoGenerate = true)
     public int id;
     // foreign keys
-    public int mood_id;
-    public int dailyactivity_id;
+    public Integer mood_id;
+    public Integer dailyactivity_id;
 }

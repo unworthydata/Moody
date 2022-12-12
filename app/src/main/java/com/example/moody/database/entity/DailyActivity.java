@@ -14,5 +14,5 @@ public class DailyActivity {
     public int id;
     public String name;
     //foreign key
-    public int dailyactivitygroup_id;
+    public Integer dailyactivitygroup_id;
 }
