@@ -2,11 +2,11 @@ package com.example.moody;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.moody.R;
 import com.example.moody.calendar.CalendarFragment;
-import com.example.moody.entry.EntryFragment;
+import com.example.moody.entry.EntryActivity;
 import com.example.moody.home.HomeFragment;
 import com.example.moody.profile.ProfileFragment;
 import com.example.moody.stats.StatsFragment;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationBarView navigationBar = findViewById(R.id.bottom_nav);
         navigationBar.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
-                case R.id.item_main:
+                case R.id.item_home:
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, new HomeFragment())
                             .commit();
@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
                             .commit();
                     return true;
                 case R.id.item_entry:
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, new EntryFragment())
-                            .commit();
+                    // switch to entry activity
+                    Intent intent = new Intent(this, EntryActivity.class);
+                    startActivity(intent);
                     return true;
                 case R.id.item_stats:
                     getSupportFragmentManager().beginTransaction()
