@@ -12,9 +12,13 @@
         <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/drawable/profile_selector.xml" value="0.1685" />
         <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/drawable/stats_selector.xml" value="0.1685" />
         <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/layout/activity_main.xml" value="0.3609375" />
+        <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/layout/fragment_calendar.xml" value="0.3183876811594203" />
+        <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/layout/fragment_entry.xml" value="0.3183876811594203" />
         <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/layout/fragment_home.xml" value="0.3183876811594203" />
         <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/layout/fragment_placeholder.xml" value="0.3183876811594203" />
+        <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/layout/fragment_profile.xml" value="0.3183876811594203" />
         <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/layout/fragment_scrolling.xml" value="0.3183876811594203" />
+        <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/layout/fragment_stats.xml" value="0.3183876811594203" />
         <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/layout/styles.xml" value="0.3183876811594203" />
         <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.33" />
         <entry key="..\:/Users/omart/AndroidStudioProjects/Moody/app/src/main/res/menu/menu.xml" value="0.3609375" />
