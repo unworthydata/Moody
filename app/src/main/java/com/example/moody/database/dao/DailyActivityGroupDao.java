@@ -23,6 +23,6 @@ public interface DailyActivityGroupDao {
     @Update
     void update(DailyActivityGroup dailyActivityGroup);
 
-    @Delete
-    void delete(DailyActivityGroup dailyActivityGroup);
+    @Query("DELETE FROM " + tableName + " WHERE id = :id")
+    void deleteById(int id);
 }

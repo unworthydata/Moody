@@ -26,7 +26,7 @@ public interface MoodDailyActivityDao {
     @Update
     void update(MoodDailyActivity moodDailyActivity);
 
-    @Delete
-    void delete(MoodDailyActivity moodDailyActivity);
+    @Query("DELETE FROM " + tableName + " WHERE id = :id")
+    void deleteById(int id);
 }
 

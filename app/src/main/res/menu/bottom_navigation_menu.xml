@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_main"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_icon"
+        android:visible="true"
+        android:title="@string/main"/>
+    <item
+        android:id="@+id/item_calendar"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar_icon"
+        android:title="@string/calendar"/>
+    <item
+        android:id="@+id/item_entry"
+        android:enabled="true"
+        android:icon="@drawable/ic_entry_icon"
+        android:title="@string/new_entry"/>
+    <item
+        android:id="@+id/item_stats"
+        android:enabled="true"
+        android:icon="@drawable/ic_stats_icon"
+        android:title="@string/stats"/>
+    <item
+        android:id="@+id/item_profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_profile_icon"
+        android:title="@string/profile"/>
+</menu>

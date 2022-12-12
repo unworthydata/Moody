@@ -21,12 +21,12 @@ public interface DailyActivityDao {
     @Query("SELECT * FROM " + tableName)
     List<DailyActivity> getAll();
 
+    @Query("SELECT * FROM " + tableName + " WHERE id = :id")
+    DailyActivity getById(int id);
+
     @Update
     void update(DailyActivity dailyActivity);
 
-    @Delete
-    void delete(DailyActivity dailyActivity);
-
-    @Query("SELECT * FROM " + tableName + " WHERE id = :id")
-    DailyActivity getById(int id);
+    @Query("DELETE FROM " + tableName + " WHERE id = :id")
+    void deleteById(int id);
 }

@@ -24,7 +24,7 @@ public interface GratitudeDao {
     @Update
     void update(Gratitude gratitude);
 
-    @Delete
-    void delete(Gratitude gratitude);
+    @Query("DELETE FROM " + tableName + " WHERE id = :id")
+    void deleteById(int id);
 }
 
