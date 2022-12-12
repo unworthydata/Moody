@@ -23,8 +23,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="45dp"
+                android:layout_marginBottom="10dp"
                 android:clickable="true"
                 android:onClick="goToMain"
+                app:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="?attr/actionModeCloseDrawable" />
@@ -36,7 +39,7 @@
                 android:layout_marginTop="55dp"
                 android:fontFamily="@font/hind_siliguri_bold"
                 android:text="@string/add_entry"
-                android:textColor="@color/textPrimary"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -46,16 +49,19 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/moodLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/promptTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/hind_siliguri_medium"
                 android:text="How do you feel today?"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,55 +78,106 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="20dp"
+                    android:hapticFeedbackEnabled="true"
+                    android:padding="10dp"
                     app:girbImage="@drawable/ic_fantastic"
-                    app:girbPressedTextColor="@color/white"
-                    app:girbText="@string/fantastic"
-                    app:girbUnpressedTextColor="?attr/colorPrimary" />
+                    app:girbPressedBackgroundDrawable="@color/mood_selected_background"
+                    app:girbPressedTextColor="@color/text_primary"
+                    app:girbUnpressedTextColor="@color/text_primary">
+
+                    <TextView
+                        android:id="@+id/fantasticTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:text="@string/fantastic"
+                        android:textSize="12sp" />
+                </xyz.teamgravity.imageradiobutton.GravityImageRadioButton>
 
                 <xyz.teamgravity.imageradiobutton.GravityImageRadioButton
                     android:id="@+id/goodButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="20dp"
+                    android:padding="10dp"
                     app:girbImage="@drawable/ic_good"
+                    app:girbPressedBackgroundDrawable="@color/mood_selected_background"
                     app:girbPressedTextColor="@color/white"
-                    app:girbText="@string/good"
-                    app:girbUnpressedTextColor="?attr/colorPrimary" />
+                    app:girbUnpressedTextColor="?attr/colorPrimary">
+
+                    <TextView
+                        android:id="@+id/goodTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:text="@string/good"
+                        android:textSize="12sp" />
+                </xyz.teamgravity.imageradiobutton.GravityImageRadioButton>
 
                 <xyz.teamgravity.imageradiobutton.GravityImageRadioButton
                     android:id="@+id/okayButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="20dp"
+                    android:padding="10dp"
                     app:girbImage="@drawable/ic_okay"
+                    app:girbPressedBackgroundDrawable="@color/mood_selected_background"
                     app:girbPressedTextColor="@color/white"
-                    app:girbText="@string/okay"
-                    app:girbUnpressedTextColor="?attr/colorPrimary" />
+                    app:girbUnpressedTextColor="?attr/colorPrimary">
+
+                    <TextView
+                        android:id="@+id/okayTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:text="@string/okay"
+                        android:textSize="12sp" />
+                </xyz.teamgravity.imageradiobutton.GravityImageRadioButton>
 
                 <xyz.teamgravity.imageradiobutton.GravityImageRadioButton
                     android:id="@+id/badButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="20dp"
+                    android:padding="10dp"
                     app:girbImage="@drawable/ic_bad"
+                    app:girbPressedBackgroundDrawable="@color/mood_selected_background"
                     app:girbPressedTextColor="@color/white"
-                    app:girbText="@string/bad"
-                    app:girbUnpressedTextColor="?attr/colorPrimary" />
+                    app:girbUnpressedTextColor="?attr/colorPrimary">
+
+                    <TextView
+                        android:id="@+id/badTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:text="@string/bad"
+                        android:textSize="12sp" />
+                </xyz.teamgravity.imageradiobutton.GravityImageRadioButton>
 
                 <xyz.teamgravity.imageradiobutton.GravityImageRadioButton
                     android:id="@+id/terribleButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="20dp"
+                    android:padding="10dp"
                     app:girbImage="@drawable/ic_terrible"
+                    app:girbPressedBackgroundDrawable="@color/mood_selected_background"
                     app:girbPressedTextColor="@color/white"
-                    app:girbText="@string/terrible"
-                    app:girbUnpressedTextColor="?attr/colorPrimary" />
+                    app:girbUnpressedTextColor="?attr/colorPrimary">
+
+                    <TextView
+                        android:id="@+id/terribleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:text="@string/terrible"
+                        android:textSize="12sp" />
+                </xyz.teamgravity.imageradiobutton.GravityImageRadioButton>
 
             </xyz.teamgravity.imageradiobutton.GravityRadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -128,25 +185,30 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/activityLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/activitiesTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="27dp"
-                android:layout_marginTop="21dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/hind_siliguri_medium"
                 android:text="Activities"
+                android:textColor="@color/text_secondary"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/healthActivityCardView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="19dp"
-                app:cardCornerRadius="8px"
+                android:backgroundTintMode="add"
+                app:cardCornerRadius="8dp"
+                app:cardMaxElevation="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/activitiesTextView">
@@ -154,15 +216,20 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#80B6EEBF"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    android:visibility="visible">
 
                     <!-- Title, secondary and supporting text -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/hind_siliguri_medium"
                         android:text="Health"
-                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
 
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/activitiesChipGroup2"
@@ -178,6 +245,7 @@
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/hind_siliguri_light"
                             android:text="Gym"
                             app:ensureMinTouchTargetSize="true" />
 
@@ -186,6 +254,7 @@
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/hind_siliguri_light"
                             android:text="Walk"
                             app:ensureMinTouchTargetSize="true" />
 
@@ -194,6 +263,7 @@
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/hind_siliguri_light"
                             android:text="Read"
                             app:ensureMinTouchTargetSize="true" />
 
@@ -202,6 +272,7 @@
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/hind_siliguri_light"
                             android:text="Meditate"
                             app:ensureMinTouchTargetSize="true" />
                     </com.google.android.material.chip.ChipGroup>
@@ -221,7 +292,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="27dp"
                 android:layout_marginTop="15dp"
+                android:fontFamily="@font/hind_siliguri_medium"
                 android:text="@string/grateful"
+                android:textColor="@color/text_secondary"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -230,9 +303,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="19dp"
+                android:layout_marginTop="16dp"
                 android:ems="10"
-                android:hint="Gratitude 1"
+                android:hint="@string/gratitude_hint_1"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:textSize="16sp"
@@ -246,7 +319,7 @@
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="18dp"
                 android:ems="10"
-                android:hint="Gratitude 3"
+                android:hint="@string/gratitude_hint_3"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:textSize="16sp"
@@ -260,7 +333,7 @@
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="18dp"
                 android:ems="10"
-                android:hint="Gratitude 2"
+                android:hint="@string/gratitude_hint_2"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:textSize="16sp"
@@ -274,11 +347,14 @@
 
             <Button
                 android:id="@+id/addEventButton"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="37dp"
-                android:text="+ Add event"
+                android:layout_marginTop="29dp"
+                android:fontFamily="@font/hind_siliguri_bold"
+                android:text="@string/add_event"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -291,12 +367,14 @@
             <Button
                 android:id="@+id/createEntryButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="22dp"
-                android:layout_marginEnd="24dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/hind_siliguri_medium"
                 android:text="@string/create"
                 app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
