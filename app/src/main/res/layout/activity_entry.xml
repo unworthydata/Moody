@@ -18,7 +18,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton"
+                android:id="@+id/backButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -33,7 +33,7 @@
                 app:srcCompat="?attr/actionModeCloseDrawable" />
 
             <TextView
-                android:id="@+id/activityTitle"
+                android:id="@+id/entryActivityTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="55dp"
@@ -189,13 +189,13 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/activitiesTextView"
+                android:id="@+id/activitiesLabelTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/hind_siliguri_medium"
                 android:text="Activities"
-                android:textColor="@color/text_secondary"
+                android:textColor="#5C6BC0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -211,7 +211,7 @@
                 app:cardMaxElevation="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/activitiesTextView">
+                app:layout_constraintTop_toBottomOf="@+id/activitiesLabelTextView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -223,6 +223,7 @@
 
                     <!-- Title, secondary and supporting text -->
                     <TextView
+                        android:id="@+id/activityLabelTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/hind_siliguri_medium"
@@ -232,7 +233,7 @@
                         android:textSize="12sp" />
 
                     <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/activitiesChipGroup2"
+                        android:id="@+id/activitiesChipGroup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
@@ -241,7 +242,7 @@
                         app:layout_constraintStart_toStartOf="parent">
 
                         <com.google.android.material.chip.Chip
-                            android:id="@+id/gymChip2"
+                            android:id="@+id/gymChip"
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -250,7 +251,7 @@
                             app:ensureMinTouchTargetSize="true" />
 
                         <com.google.android.material.chip.Chip
-                            android:id="@+id/walkChip2"
+                            android:id="@+id/walkChip"
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -259,7 +260,7 @@
                             app:ensureMinTouchTargetSize="true" />
 
                         <com.google.android.material.chip.Chip
-                            android:id="@+id/readChip2"
+                            android:id="@+id/readChip"
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -268,7 +269,7 @@
                             app:ensureMinTouchTargetSize="true" />
 
                         <com.google.android.material.chip.Chip
-                            android:id="@+id/meditateChip2"
+                            android:id="@+id/meditateChip"
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -342,6 +343,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addEventButtonContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -350,11 +352,35 @@
                 style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="29dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/hind_siliguri_bold"
                 android:text="@string/add_event"
                 android:textColor="@color/text_secondary"
                 android:textSize="12sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/eventEditTextContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/eventInputEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/hind_siliguri_medium"
+                android:text="What happened today?"
+                android:textColor="@color/text_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -369,9 +395,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="45dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="45dp"
                 android:layout_marginBottom="40dp"
                 android:fontFamily="@font/hind_siliguri_medium"
+                android:onClick="addEntry"
                 android:text="@string/create"
                 app:cornerRadius="14dp"
                 app:layout_constraintBottom_toBottomOf="parent"
