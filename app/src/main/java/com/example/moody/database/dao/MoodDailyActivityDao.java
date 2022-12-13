@@ -20,13 +20,7 @@ public interface MoodDailyActivityDao {
     @Query("SELECT * FROM " + tableName)
     List<MoodDailyActivity> getAll();
 
-    @Query("SELECT * FROM " + tableName + " WHERE id = :id")
-    MoodDailyActivity getById(int id);
-
     @Update
     void update(MoodDailyActivity moodDailyActivity);
-
-    @Query("DELETE FROM " + tableName + " WHERE id = :id")
-    void deleteById(int id);
 }
 

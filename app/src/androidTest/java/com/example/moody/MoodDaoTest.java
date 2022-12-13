@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
 
 import androidx.room.Room;
 import androidx.test.core.app.ApplicationProvider;
@@ -20,6 +21,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -40,6 +42,24 @@ public class MoodDaoTest {
     @Test
     public void closeDb() throws IOException {
         db.close();
+    }
+
+    @Test
+    public void writeMoodDate() throws Exception {
+        Mood mood = new Mood();
+        mood.date = new Date(LocalDate.now().toEpochDay());
+        Log.v("Mood date", mood.date.toString());
+        moodDao.insert(mood);
+        List<Mood> allMoods = moodDao.getAll();
+        assertEquals(allMoods.get(0).date, mood.date);
+    }
+
+    @Test
+    public void writeCurrentMoodDate() throws Exception {
+        Mood mood = new Mood();
+        mood.id = 7;
+        moodDao.insert(mood);
+        assertEquals(moodDao.getById(7).date, mood.date);
     }
 
     @Test

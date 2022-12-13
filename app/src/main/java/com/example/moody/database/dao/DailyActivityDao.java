@@ -22,7 +22,10 @@ public interface DailyActivityDao {
     List<DailyActivity> getAll();
 
     @Query("SELECT * FROM " + tableName + " WHERE id = :id")
-    DailyActivity getById(int id);
+    DailyActivity get(int id);
+
+    @Query("SELECT 1 FROM " + tableName + " WHERE name = :name")
+    DailyActivity get(String name);
 
     @Update
     void update(DailyActivity dailyActivity);

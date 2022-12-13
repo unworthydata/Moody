@@ -2,19 +2,26 @@ package com.example.moody.entry;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.ArrayMap;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.moody.MainActivity;
 import com.example.moody.R;
+import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import xyz.teamgravity.imageradiobutton.GravityImageRadioButton;
 import xyz.teamgravity.imageradiobutton.GravityRadioGroup;
@@ -28,6 +35,7 @@ public class EntryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_entry);
 
         entryViewModel = new ViewModelProvider(this).get(EntryViewModel.class);
+        entryViewModel.setContext(getApplicationContext());
 
         Button addEventButton = findViewById(R.id.addEventButton);
 
@@ -48,8 +56,7 @@ public class EntryActivity extends AppCompatActivity {
         GravityImageRadioButton feelingPicked = findViewById(feelingGroup.checkedRadioButtonId());
 
         // get chosen activities
-        ChipGroup activityChips = findViewById(R.id.activitiesChipGroup);
-        List<Integer> checkedActivityChips = activityChips.getCheckedChipIds();
+        List<String> checkedActivities = getCheckedActivities();
 
         // get all gratitude entries
         List<String> gratitudeList = new ArrayList<>();
@@ -61,7 +68,24 @@ public class EntryActivity extends AppCompatActivity {
         gratitudeList.add(thirdGratitude);
 
         String event = ((EditText) findViewById(R.id.eventInputEditText)).getText().toString();
-        entryViewModel.addMood(feelingPicked, checkedActivityChips, gratitudeList, event);
+        entryViewModel.addMood(feelingPicked, checkedActivities, gratitudeList, event);
+    }
+
+    @NonNull
+    private List<String> getCheckedActivities() {
+        ViewGroup activitiesGroupsContainer = findViewById(R.id.activityGroupsContainer);
+        List<String> checkedActivities = new ArrayList<>();
+        for (int index = 0; index < activitiesGroupsContainer.getChildCount(); index++) {
+            ViewGroup nextChild = (ViewGroup) activitiesGroupsContainer.getChildAt(index);
+            // hard-coded values are ok because the Mood card layout will not change
+            ChipGroup chips = (ChipGroup) ((ViewGroup) nextChild.getChildAt(0)).getChildAt(1);
+            for (int chipIndex = 0; chipIndex < chips.getChildCount(); chipIndex++) {
+                Chip nextChip = (Chip) chips.getChildAt(chipIndex);
+                if (nextChip.isChecked())
+                    checkedActivities.add(nextChip.getText().toString());
+            }
+        }
+        return checkedActivities;
     }
 
     public void goToMain(View view) {
