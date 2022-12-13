@@ -11,4 +11,6 @@
     <color name="text_secondary">#8A8BB3</color>
     <color name="mood_selected_background">#70D9D9D9</color>
     <color name="primary_btn_color">#5B67CA</color>
+    <color name="fantastic_entry_text_color">#48C7E2</color>
+    <color name="fantastic_entry_background_color">#EBF9FF</color>
 </resources>

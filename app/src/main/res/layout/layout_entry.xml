@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--MaterialCardView-->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content "
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/feelingImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="7dp"
+            android:paddingTop="11dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="79dp"
+            app:srcCompat="@drawable/ic_fantastic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/hind_siliguri"
+                    android:text="Friday, 4 Nov"
+                    android:textColor="@color/text_secondary" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/feelingTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="11dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/hind_siliguri_bold"
+                            android:text="@string/fantastic"
+                            android:textColor="@color/fantastic_entry_text_color"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/timeTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/hind_siliguri"
+                            android:text="20:00"
+                            android:textColor="@color/text_secondary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="0dp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/hourglass"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_hourglass" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/screenTimeTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_weight="1"
+                            android:text="3 hours, 22 minutes"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"></LinearLayout>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/ChipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bruh"
+                    android:textSize="10sp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bruh" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bruh6" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bruh7" />
+            </com.google.android.material.chip.ChipGroup>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/editButton"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon="@drawable/ic_edit_entry" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
