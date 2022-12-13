@@ -4,8 +4,11 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content "
+    android:id="@+id/entryCard"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    app:cardElevation="15dp"
+    app:cardMaxElevation="15dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -14,22 +17,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:background="@color/fantastic_entry_background_color"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/feelingImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="7dp"
-            android:paddingTop="11dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="79dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="9dp"
             app:srcCompat="@drawable/ic_fantastic" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -148,32 +152,85 @@
                 android:id="@+id/ChipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="0dp">
+                android:clickable="true">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="bruh"
-                    android:textSize="10sp" />
+                    android:fontFamily="@font/hind_siliguri_bold"
+                    android:text="Go for a run"
+                    android:textSize="10sp"
+                    app:chipEndPadding="4dp"
+                    app:chipMinTouchTargetSize="0dp"
+                    app:chipStartPadding="4dp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="bruh" />
+                    android:fontFamily="@font/hind_siliguri_bold"
+                    android:text="Go for a run"
+                    android:textSize="10sp"
+                    app:chipEndPadding="4dp"
+                    app:chipMinTouchTargetSize="0dp"
+                    app:chipStartPadding="4dp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="bruh6" />
+                    android:fontFamily="@font/hind_siliguri_bold"
+                    android:text="Go for a run with Coffee in the park and add some hotsauce"
+                    android:textSize="10sp"
+                    app:chipEndPadding="4dp"
+                    app:chipMinTouchTargetSize="0dp"
+                    app:chipStartPadding="4dp" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip7"
+                    android:id="@+id/chip16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="bruh7" />
+                    android:fontFamily="@font/hind_siliguri_bold"
+                    android:text="Go for a run"
+                    android:textSize="10sp"
+                    app:chipEndPadding="4dp"
+                    app:chipMinTouchTargetSize="0dp"
+                    app:chipStartPadding="4dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/hind_siliguri_bold"
+                    android:text="Go for a run"
+                    android:textSize="10sp"
+                    app:chipEndPadding="4dp"
+                    app:chipMinTouchTargetSize="0dp"
+                    app:chipStartPadding="4dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/hind_siliguri_bold"
+                    android:text="Go for a run"
+                    android:textSize="10sp"
+                    app:chipEndPadding="4dp"
+                    app:chipMinTouchTargetSize="0dp"
+                    app:chipStartPadding="4dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/hind_siliguri_bold"
+                    android:text="Go for a run"
+                    android:textSize="10sp"
+                    app:chipEndPadding="4dp"
+                    app:chipMinTouchTargetSize="0dp"
+                    app:chipStartPadding="4dp" />
+
             </com.google.android.material.chip.ChipGroup>
 
         </LinearLayout>
@@ -183,7 +240,6 @@
             style="@style/Widget.Material3.Button.IconButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             app:icon="@drawable/ic_edit_entry" />
 
     </LinearLayout>
