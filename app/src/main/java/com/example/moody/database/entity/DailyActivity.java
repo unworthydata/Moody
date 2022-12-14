@@ -15,4 +15,9 @@ public class DailyActivity {
     public String name;
     //foreign key
     public Integer dailyactivitygroup_id;
+
+    public DailyActivity(String name, Integer dailyactivitygroup_id) {
+        this.name = name;
+        this.dailyactivitygroup_id = dailyactivitygroup_id;
+    }
 }

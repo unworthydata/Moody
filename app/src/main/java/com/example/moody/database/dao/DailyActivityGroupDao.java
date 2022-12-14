@@ -25,4 +25,11 @@ public interface DailyActivityGroupDao {
 
     @Query("DELETE FROM " + tableName + " WHERE id = :id")
     void deleteById(int id);
+
+    //get by name method
+    @Query("SELECT * FROM " + tableName + " WHERE name = :name")
+    DailyActivityGroup get(String name);
+
+    @Query("DELETE FROM " + tableName)
+    void deleteAll();
 }

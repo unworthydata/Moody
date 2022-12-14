@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.moody.calendar.CalendarFragment;
+import com.example.moody.database.AppDatabase;
 import com.example.moody.entry.EntryActivity;
 import com.example.moody.home.HomeFragment;
 import com.example.moody.profile.ProfileFragment;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); 
+        setContentView(R.layout.activity_main);
 
         // default fragment is the home fragment
         getSupportFragmentManager().beginTransaction()
@@ -31,29 +32,29 @@ public class MainActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, new HomeFragment())
                             .commit();
-                    return true;
+                    break;
                 case R.id.item_calendar:
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, new CalendarFragment())
                             .commit();
-                    return true;
+                    break;
                 case R.id.item_entry:
                     // switch to entry activity
                     Intent intent = new Intent(this, EntryActivity.class);
                     startActivity(intent);
-                    return true;
+                    break;
                 case R.id.item_stats:
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, new StatsFragment())
                             .commit();
-                    return true;
+                    break;
                 case R.id.item_profile:
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, new ProfileFragment())
                             .commit();
-                    return true;
+                    break;
             }
-            return false;
+            return true;
         });
     }
 }

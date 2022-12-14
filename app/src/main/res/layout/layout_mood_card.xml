@@ -7,6 +7,7 @@
     android:id="@+id/entryCard"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
     app:cardElevation="15dp"
     app:cardMaxElevation="15dp"
     app:layout_constraintBottom_toBottomOf="parent"

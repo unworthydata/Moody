@@ -213,6 +213,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTintMode="add"
+                    android:visibility="gone"
                     app:cardCornerRadius="8dp"
                     app:cardMaxElevation="2dp">
 
@@ -382,7 +383,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/hind_siliguri_medium"
-                android:text="What happened today?"
+                android:hint="What happened today?"
                 android:textColor="@color/text_secondary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

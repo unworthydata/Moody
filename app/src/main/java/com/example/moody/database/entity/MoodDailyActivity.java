@@ -15,8 +15,8 @@ import androidx.room.PrimaryKey;
                 onDelete = ForeignKey.CASCADE)})
 public class MoodDailyActivity {
     // this table represents a connector table between Mood and DailyActivity
-//    @PrimaryKey(autoGenerate = true)
-//    public int id;
+    @PrimaryKey(autoGenerate = true)
+    public int id;
     // foreign keys
     public Integer mood_id;
     public Integer dailyactivity_id;

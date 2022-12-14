@@ -1,10 +1,18 @@
 package com.example.moody.entry;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.example.moody.R;
 import com.example.moody.database.Feeling;
@@ -23,10 +31,9 @@ import xyz.teamgravity.imageradiobutton.GravityImageRadioButton;
 
 public class EntryViewModel extends ViewModel {
     private EntryModel entryModel;
-    private Context context;
 
     public EntryViewModel() {
-        entryModel = new EntryModel(context);
+        entryModel = EntryModel.getInstance();
     }
 
     public void addMood(GravityImageRadioButton feelingPicked, List<String> checkedDailyActivities,
@@ -72,11 +79,7 @@ public class EntryViewModel extends ViewModel {
         return feeling;
     }
 
-    public Context getContext() {
-        return context;
-    }
-
-    public void setContext(Context context) {
-        this.context = context;
+    public Map<String, List<String>> getDailyActivities() {
+        return entryModel.getDailyActivities();
     }
 }
