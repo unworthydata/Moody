@@ -205,22 +205,164 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@+id/activitiesLabelTextView"
-                tools:layout_editor_absoluteX="10dp">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activitiesLabelTextView">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/healthGroupCardView"
+                    android:id="@+id/readingGroupCardView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:backgroundTintMode="add"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     app:cardCornerRadius="8dp"
                     app:cardMaxElevation="2dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
                         android:background="#80B6EEBF"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:visibility="visible">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:id="@+id/activityLabelTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/hind_siliguri_medium"
+                            android:text="Reading"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/activitiesChipGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/gymChip"
+                                style="@style/Widget.Material3.Chip.Filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hind_siliguri_light"
+                                android:text="Non-Fiction"
+                                app:ensureMinTouchTargetSize="true" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/walkChip"
+                                style="@style/Widget.Material3.Chip.Filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hind_siliguri_light"
+                                android:text="Fiction"
+                                app:ensureMinTouchTargetSize="true" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/readChip"
+                                style="@style/Widget.Material3.Chip.Filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hind_siliguri_light"
+                                android:text="Quran"
+                                app:ensureMinTouchTargetSize="true" />
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sleepGroupCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTintMode="add"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#D10303"
+                    app:cardCornerRadius="8dp"
+                    app:cardMaxElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#B6C6EE"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:visibility="visible">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:id="@+id/activityLabelTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/hind_siliguri_medium"
+                            android:text="Sleep"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/activitiesChipGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/gymChip"
+                                style="@style/Widget.Material3.Chip.Filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hind_siliguri_light"
+                                android:text="Good Sleep"
+                                app:ensureMinTouchTargetSize="true" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/walkChip"
+                                style="@style/Widget.Material3.Chip.Filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hind_siliguri_light"
+                                android:text="Bad Sleep"
+                                app:ensureMinTouchTargetSize="true" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/readChip"
+                                style="@style/Widget.Material3.Chip.Filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/hind_siliguri_light"
+                                android:text="Mediium Sleep"
+                                app:ensureMinTouchTargetSize="true" />
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/exerciseGroupCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTintMode="add"
+                    android:visibility="visible"
+                    app:cardCornerRadius="8dp"
+                    app:cardMaxElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFE5D3"
                         android:orientation="vertical"
                         android:padding="16dp"
                         android:visibility="visible">
@@ -269,7 +411,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/hind_siliguri_light"
-                                android:text="Read"
+                                android:text="Stretch"
                                 app:ensureMinTouchTargetSize="true" />
 
                             <com.google.android.material.chip.Chip
@@ -283,6 +425,7 @@
                         </com.google.android.material.chip.ChipGroup>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
+
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

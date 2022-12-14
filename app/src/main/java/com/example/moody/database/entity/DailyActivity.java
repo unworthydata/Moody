@@ -16,8 +16,15 @@ public class DailyActivity {
     //foreign key
     public Integer dailyactivitygroup_id;
 
-    public DailyActivity(String name, Integer dailyactivitygroup_id) {
+    public DailyActivity() {
+    }
+
+    public DailyActivity(String name) {
         this.name = name;
+    }
+
+    public DailyActivity(String name, Integer dailyactivitygroup_id) {
+        this(name);
         this.dailyactivitygroup_id = dailyactivitygroup_id;
     }
 }

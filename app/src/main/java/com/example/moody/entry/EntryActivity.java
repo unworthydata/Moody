@@ -47,6 +47,12 @@ public class EntryActivity extends AppCompatActivity {
             findViewById(R.id.addEventButtonContainer).setVisibility(View.GONE);
             findViewById(R.id.eventEditTextContainer).setVisibility(View.VISIBLE);
         });
+
+        new Thread(() -> {
+            // a potentially time consuming task
+            entryViewModel.getDailyActivities();
+//            imageView.post((Runnable) () -> imageView.setImageBitmap(bitmap));
+        }).start();
     }
 
     public void addEntry(View view) {

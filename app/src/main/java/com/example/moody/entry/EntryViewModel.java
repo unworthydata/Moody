@@ -55,7 +55,7 @@ public class EntryViewModel extends ViewModel {
     // (in this case, Feeling enum)
     @NonNull
     private Feeling getFeeling(GravityImageRadioButton feelingPicked) {
-        Feeling feeling = null;
+        Feeling feeling;
 
         switch (feelingPicked.getId()) {
             case R.id.fantasticButton:
